@@ -1,36 +1,40 @@
-# Трек-рекорд сигналов Polymarket
+# Polymarket signals: track record
 
-Журнал ведётся автоматически. Каждый сигнал записывается в `signals.csv` в момент
-публикации, до разрешения рынка. Результат проставляется только по фактической
-выплате рынка. Время каждой записи подтверждается историей коммитов этого репозитория.
+The journal is maintained automatically. Every signal is written to `signals.csv` when it is
+published, before its market resolves. Results come only from the actual market payout.
+The commit history of this repository timestamps every entry.
 
-## Сводка
+Stats page: `index.html` (published via GitHub Pages).
+
+## Summary
 
 ```
-📊 Трек-рекорд на 01.10.2026 00:31
-Условная позиция на каждый сигнал фиксированная, результат считается по факту разрешения рынков.
+📊 Track record as of Sep 30, 2026 22:57 UTC
+Fixed notional stake per signal, results counted only from actual market resolution.
 
-Всего: сигналов 4, открыто 4, закрыто 0
-  в работе 345.62 USD, ожидаемая прибыль +17.48 USD
+All signals: 4 signals, 4 open, 0 closed
+  at work 345.62 USD, profit if right +17.48 USD
 
-Модель опционов: сигналов 1, открыто 1, закрыто 0
-  в работе 44.36 USD, ожидаемая прибыль +7.64 USD
+Options model: 1 signals, 1 open, 0 closed
+  at work 44.36 USD, profit if right +7.64 USD
 
-Почти решённые рынки: сигналов 3, открыто 3, закрыто 0
-  в работе 301.26 USD, ожидаемая прибыль +9.84 USD
+Near-resolved markets: 3 signals, 3 open, 0 closed
+  at work 301.26 USD, profit if right +9.84 USD
 
-Записей в цепочке: 4 · цепочка хешей целая ✅
+Entries in the hash chain: 4 · chain intact ✅
 ```
 
-## Как проверить журнал
+## How to verify the journal
 
-Записи связаны цепочкой SHA-256. Для каждой строки `signals.csv`:
+Entries are linked by a SHA-256 chain. For each row of `signals.csv`:
 
-1. `hash` = SHA-256 от строки `prev_hash + "|" + canonical`, в UTF-8, hex в нижнем регистре.
-2. `prev_hash` совпадает с `hash` предыдущей строки. У первой строки это 64 нуля.
-3. `canonical` содержит id, время, стратегию, рынки, цены и размер позиции этой строки.
+1. `hash` = SHA-256 of `prev_hash + "|" + canonical`, UTF-8, lowercase hex.
+2. `prev_hash` equals the `hash` of the previous row. The first row uses 64 zeros.
+3. `canonical` holds the id, time, strategy, markets, prices and stake of that row.
 
-Изменить или удалить старую запись незаметно нельзя: сломается цепочка всех последующих
-хешей, а история коммитов покажет правку.
+An old entry cannot be changed or deleted unnoticed: every later hash would break,
+and the commit history would show the edit.
 
-Обновлено: 2026-09-30T21:31:32.702298159Z
+Not financial advice. Prediction markets can lose the whole stake.
+
+Updated: 2026-09-30T22:57:57.998555447Z

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polymarket signals track record</title>
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;
+  --grid:#e1e0d9;--axis:#c3c2b7;--ring:rgba(11,11,11,.10);--series:#2a78d6;--good:#006300;--bad:#d03b3b}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;
+  --muted:#898781;--grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.10);--series:#3987e5;--good:#0ca30c;--bad:#e66767}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:36px 0 12px}
+p.sub{color:var(--ink2);margin:0 0 24px}
+a{color:var(--series)}
+.hero{font-size:52px;font-weight:600;line-height:1.1;margin:8px 0 2px}
+.hero-label{color:var(--ink2)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:24px}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:12px 14px}
+.tile .l{color:var(--ink2);font-size:13px}.tile .v{font-size:22px;font-weight:600}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:16px;position:relative}
+.empty{color:var(--ink2);padding:32px 0;text-align:center}
+svg text{fill:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--ring);border-radius:8px;
+  padding:8px 10px;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,.12);display:none;max-width:280px}
+.scroll{overflow-x:auto}
+.chart-scroll svg{min-width:640px;display:block}
+table.strat{min-width:640px}table.signals{min-width:900px}td.title{min-width:260px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+th{color:var(--ink2);font-weight:600}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.won{color:var(--good)}.lost{color:var(--bad)}.muted{color:var(--muted)}
+footer{margin-top:40px;color:var(--ink2);font-size:13px}
+code{font-size:12px}
+</style></head><body><main>
+<h1>Polymarket signals: track record</h1>
+<p class="sub">Every signal is recorded before its market resolves, with a fixed notional stake. Results come only from actual market resolution. Updated Sep 30, 2026 22:57 UTC.</p>
+<div class="hero-label">Realized result</div>
+<div class="hero ">No closed signals yet</div>
+<div class="tiles">
+<div class="tile"><div class="l">Signals</div><div class="v">4</div></div>
+<div class="tile"><div class="l">Open</div><div class="v">4</div></div>
+<div class="tile"><div class="l">Win rate</div><div class="v">–</div></div>
+<div class="tile"><div class="l">Expected vs actual wins</div><div class="v">–</div></div>
+<div class="tile"><div class="l">Chance of this by luck</div><div class="v">–</div></div>
+<div class="tile"><div class="l">Hash chain</div><div class="v">Intact ✓</div></div>
+</div>
+<h2>Cumulative realized result, USD</h2>
+<div class="card" id="chart"><div class="empty">The chart appears after the first signal closes.</div><div class="tip" id="tip"></div></div>
+<h2>By strategy</h2>
+<div class="card scroll"><table class="strat"><thead><tr><th>Strategy</th><th class="n">Signals</th><th class="n">Open</th><th class="n">Won</th><th class="n">Lost</th><th class="n">Expected wins</th><th class="n">Staked</th><th class="n">Result</th></tr></thead><tbody>
+<tr><td>Options model</td><td class="n">1</td><td class="n">1</td><td class="n">0</td><td class="n">0</td><td class="n">–</td><td class="n">$0.00</td><td class="n ">–</td></tr>
+<tr><td>Near-resolved markets</td><td class="n">3</td><td class="n">3</td><td class="n">0</td><td class="n">0</td><td class="n">–</td><td class="n">$0.00</td><td class="n ">–</td></tr>
+</tbody></table></div>
+<h2>All signals</h2>
+<div class="card scroll"><table class="signals"><thead><tr><th class="n">#</th><th>Recorded</th><th>Strategy</th><th>Signal</th><th class="n">Cost</th><th class="n">Payout if right</th><th class="n">Model p</th><th>Status</th><th class="n">Result</th></tr></thead><tbody>
+<tr><td class="n">4</td><td class="n">Sep 30, 2026 21:14 UTC</td><td>Options model</td><td class="title"><a href="https://polymarket.com/event/what-price-will-bitcoin-hit-in-september-2026">No @ 0.840: Will Bitcoin reach $85,000 in September?</a></td><td class="n">$44.36</td><td class="n">$52.00</td><td class="n">93%</td><td><span class="muted">○ Open</span></td><td class="n ">–</td></tr>
+<tr><td class="n">3</td><td class="n">Sep 30, 2026 21:03 UTC</td><td>Near-resolved markets</td><td class="title"><a href="https://polymarket.com/event/solana-above-on-october-2-2026">Yes @ 0.963: Will the price of Solana be above $110 on October 2?</a></td><td class="n">$100.86</td><td class="n">$103.84</td><td class="n">–</td><td><span class="muted">○ Open</span></td><td class="n ">–</td></tr>
+<tr><td class="n">2</td><td class="n">Sep 30, 2026 21:03 UTC</td><td>Near-resolved markets</td><td class="title"><a href="https://polymarket.com/event/bitcoin-above-on-october-2-2026">Yes @ 0.960: Will the price of Bitcoin be above $80,000 on October 2?</a></td><td class="n">$100.28</td><td class="n">$104.17</td><td class="n">–</td><td><span class="muted">○ Open</span></td><td class="n ">–</td></tr>
+<tr><td class="n">1</td><td class="n">Sep 30, 2026 21:03 UTC</td><td>Near-resolved markets</td><td class="title"><a href="https://polymarket.com/event/trump-names-ai-czar-byptptpt">No @ 0.970: Will Trump name an AI czar by October 1, 2026?</a></td><td class="n">$100.12</td><td class="n">$103.09</td><td class="n">–</td><td><span class="muted">○ Open</span></td><td class="n ">–</td></tr>
+</tbody></table></div>
+<footer>
+<p>Full journal: <a href="signals.csv">signals.csv</a>. Entries form a SHA-256 chain:
+<code>hash = sha256(prev_hash + "|" + canonical)</code>, the first <code>prev_hash</code> is 64 zeros.
+Editing or deleting any entry breaks every later hash, and the commit history of this repository shows when each entry was added.</p>
+<p>Not financial advice. Prediction markets can lose the whole stake.</p>
+</footer>
+<script>
+(function(){var hit=document.getElementById('hit');if(!hit)return;
+var pts=JSON.parse(hit.getAttribute('data-points')),svg=hit.ownerSVGElement,tip=document.getElementById('tip'),
+xh=document.getElementById('xh'),dot=document.getElementById('dot'),card=document.getElementById('chart');
+function show(e){var pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;var p=pt.matrixTransform(svg.getScreenCTM().inverse());
+var best=pts[0];pts.forEach(function(q){if(Math.abs(q.x-p.x)<Math.abs(best.x-p.x))best=q;});
+xh.setAttribute('x1',best.x);xh.setAttribute('x2',best.x);xh.setAttribute('visibility','visible');
+dot.setAttribute('cx',best.x);dot.setAttribute('cy',best.y);dot.setAttribute('visibility','visible');
+tip.textContent='';[best.d,best.s,'Signal result: '+best.p,'Cumulative: '+best.c].forEach(function(t,i){var d=document.createElement('div');
+d.textContent=t;if(i===0)d.style.color='var(--ink2)';if(i===3)d.style.fontWeight='600';tip.appendChild(d);});
+tip.style.display='block';var r=card.getBoundingClientRect(),left=e.clientX-r.left+14;
+if(left+tip.offsetWidth>r.width)left=e.clientX-r.left-tip.offsetWidth-14;
+left=Math.max(8,Math.min(left,r.width-tip.offsetWidth-8));tip.style.left=left+'px';tip.style.top=(e.clientY-r.top+14)+'px';}
+function hide(){tip.style.display='none';xh.setAttribute('visibility','hidden');dot.setAttribute('visibility','hidden');}
+hit.addEventListener('mousemove',show);hit.addEventListener('mouseleave',hide);})();
+</script>
+</main></body></html>
