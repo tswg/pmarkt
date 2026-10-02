@@ -9,26 +9,26 @@ Stats page: `index.html` (published via GitHub Pages).
 ## Summary
 
 ```
-📊 Track record as of Oct 2, 2026 11:31 UTC
+📊 Track record as of Oct 2, 2026 16:20 UTC
 Fixed notional stake per signal, results counted only from actual market resolution.
 
-All signals: 11 signals, 8 open, 3 closed
-  won 2, lost 1, flat 0 · win rate 67%
-  expected wins 2.1 of 3, actual 2
-  staked 251.06 USD, result -95.97 USD (-38.22%)
-  at work 785.64 USD, profit if right +250.80 USD
+All signals: 11 signals, 3 open, 8 closed
+  won 5, lost 3, flat 0 · win rate 63%
+  expected wins 6.1 of 8, actual 5
+  staked 733.35 USD, result -248.30 USD (-33.86%)
+  at work 303.35 USD, profit if right +71.54 USD
 
-Options model: 6 signals, 4 open, 2 closed
-  won 1, lost 1, flat 0 · win rate 50%
-  expected wins 1.1 of 2, actual 1
-  staked 150.94 USD, result -98.94 USD (-65.55%)
-  at work 383.95 USD, profit if right +236.26 USD
+Options model: 6 signals, 1 open, 5 closed
+  won 2, lost 3, flat 0 · win rate 40%
+  expected wins 3.2 of 5, actual 2
+  staked 432.09 USD, result -258.14 USD (-59.74%)
+  at work 102.80 USD, profit if right +63.87 USD
 
-Near-resolved markets: 5 signals, 4 open, 1 closed
-  won 1, lost 0, flat 0 · win rate 100%
-  expected wins 1.0 of 1, actual 1 · chance of this by luck 97%
-  staked 100.12 USD, result +2.97 USD (+2.97%)
-  at work 401.69 USD, profit if right +14.54 USD
+Near-resolved markets: 5 signals, 2 open, 3 closed
+  won 3, lost 0, flat 0 · win rate 100%
+  expected wins 2.9 of 3, actual 3 · chance of this by luck 90%
+  staked 301.26 USD, result +9.84 USD (+3.27%)
+  at work 200.55 USD, profit if right +7.67 USD
 
 Entries in the hash chain: 11 · chain intact ✅
 ```
@@ -46,4 +46,4 @@ and the commit history would show the edit.
 
 Not financial advice. Prediction markets can lose the whole stake.
 
-Updated: 2026-10-02T11:31:17.832237497Z
+Updated: 2026-10-02T16:20:26.520449286Z
