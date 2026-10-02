@@ -43,4 +43,4 @@ and the commit history would show the edit.
 
 Not financial advice. Prediction markets can lose the whole stake.
 
-Updated: 2026-10-02T00:10:26.645961308Z
+Updated: 2026-10-02T00:10:28.999731179Z
