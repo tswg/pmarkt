@@ -4,12 +4,16 @@ The journal is maintained automatically. Every signal is written to `signals.csv
 published, before its market resolves. Results come only from the actual market payout.
 The commit history of this repository timestamps every entry.
 
+Premium members get signals first. Until the free channel gets a signal (or its market
+resolves), its row is sealed: only `seq`, `created_at`, status `SEALED` and `commitment`
+are shown. The full row and its `salt` are published later.
+
 Stats page: `index.html` (published via GitHub Pages).
 
 ## Summary
 
 ```
-📊 Track record as of Oct 4, 2026 00:20 UTC
+📊 Track record as of Oct 4, 2026 01:52 UTC
 Fixed notional stake per signal, results counted only from actual market resolution.
 
 All signals: 14 signals, 2 open, 12 closed
@@ -39,10 +43,15 @@ Entries are linked by a SHA-256 chain. For each row of `signals.csv`:
 1. `hash` = SHA-256 of `prev_hash + "|" + canonical`, UTF-8, lowercase hex.
 2. `prev_hash` equals the `hash` of the previous row. The first row uses 64 zeros.
 3. `canonical` holds the id, time, strategy, markets, prices and stake of that row.
+4. If `salt` is set, `commitment` = SHA-256 of `salt + "|" + hash`, and the same
+   `commitment` appears in the commit that first added the row, while it was still sealed.
+
+Sealed rows are always the last rows of the file: rows are revealed strictly in order.
+Skip them when checking the chain; check them once they are revealed.
 
 An old entry cannot be changed or deleted unnoticed: every later hash would break,
 and the commit history would show the edit.
 
 Not financial advice. Prediction markets can lose the whole stake.
 
-Updated: 2026-10-04T00:20:28.106770739Z
+Updated: 2026-10-04T01:52:29.324010355Z

@@ -35,7 +35,7 @@ footer{margin-top:40px;color:var(--ink2);font-size:13px}
 code{font-size:12px}
 </style></head><body><main>
 <h1>Polymarket signals: track record</h1>
-<p class="sub">Every signal is recorded before its market resolves, with a fixed notional stake. Results come only from actual market resolution. Updated Oct 4, 2026 00:20 UTC.</p>
+<p class="sub">Every signal is recorded before its market resolves, with a fixed notional stake. Results come only from actual market resolution. Updated Oct 4, 2026 01:52 UTC.</p>
 <div class="hero-label">Realized result</div>
 <div class="hero lost">−$160.16</div>
 <div class="hero-label">-14.1% on $1,137.75 staked across 12 closed signals</div>
@@ -74,7 +74,9 @@ code{font-size:12px}
 <footer>
 <p>Full journal: <a href="signals.csv">signals.csv</a>. Entries form a SHA-256 chain:
 <code>hash = sha256(prev_hash + "|" + canonical)</code>, the first <code>prev_hash</code> is 64 zeros.
-Editing or deleting any entry breaks every later hash, and the commit history of this repository shows when each entry was added.</p>
+Editing or deleting any entry breaks every later hash, and the commit history of this repository shows when each entry was added.
+A new entry first appears sealed, as <code>commitment = sha256(salt + "|" + hash)</code> with a random secret salt;
+the full entry and its salt are published when the free channel gets the signal or the market resolves.</p>
 <p>Not financial advice. Prediction markets can lose the whole stake.</p>
 </footer>
 <script>
