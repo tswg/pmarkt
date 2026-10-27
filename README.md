@@ -13,7 +13,7 @@ Stats page: `index.html` (published via GitHub Pages).
 ## Summary
 
 ```
-📊 Track record as of Oct 26, 2026 00:01 UTC
+📊 Track record as of Oct 27, 2026 00:01 UTC
 Fixed notional stake per signal, results counted only from actual market resolution.
 
 All signals: 14 signals, 0 open, 14 closed
@@ -52,4 +52,4 @@ and the commit history would show the edit.
 
 Not financial advice. Prediction markets can lose the whole stake.
 
-Updated: 2026-10-26T00:01:17.502159139Z
+Updated: 2026-10-27T00:01:21.671003562Z
